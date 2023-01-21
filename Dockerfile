@@ -49,23 +49,23 @@ FROM ubuntu:latest
 LABEL maintainer="Kyle Manna <kyle@kylemanna.com>"
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-ENV HOME /bitcoin
-EXPOSE 8332 8333
-VOLUME ["/bitcoin/.bitcoin"]
-WORKDIR /bitcoin
+ENV HOME /digibyte
+EXPOSE 12024 14022
+VOLUME ["/digibyte/.digibyte"]
+WORKDIR /digibyte
 
 ARG GROUP_ID=1000
 ARG USER_ID=1000
-RUN groupadd -g ${GROUP_ID} bitcoin \
-    && useradd -u ${USER_ID} -g bitcoin -d /bitcoin bitcoin
+RUN groupadd -g ${GROUP_ID} digibyte \
+    && useradd -u ${USER_ID} -g digibyte -d /digibyte digibyte
 
 COPY --from=build /opt/ /opt/
 
 RUN apt update \
     && apt install -y --no-install-recommends gosu libatomic1 \
     && apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-    && ln -sv /opt/bitcoin/bin/* /usr/local/bin
+    && ln -sv /opt/digibyte/bin/* /usr/local/bin
 
 COPY ./bin ./docker-entrypoint.sh /usr/local/bin/
 
-CMD ["btc_oneshot"]
+CMD ["dgb_oneshot"]
