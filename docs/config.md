@@ -1,4 +1,4 @@
-bitcoind config tuning
+digibyted config tuning
 ======================
 
 You can use environment variables to customize config ([see docker run environment options](https://docs.docker.com/engine/reference/run/#/env-environment-variables)):
