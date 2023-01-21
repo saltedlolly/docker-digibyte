@@ -25,6 +25,10 @@ RUN apt update \
     wget \
     && apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# --------------------------------------------------------------------
+
+# This part needs converting to get the latest DigiByte Core
+
 ARG VERSION=24.0.1
 ARG BITCOIN_CORE_SIGNATURE=71A3B16735405025D447E8F274810B012346C9A6
 
@@ -45,8 +49,10 @@ RUN cd /tmp \
     && /opt/bitcoin/bin/test_bitcoin --show_progress \
     && rm -v /opt/bitcoin/bin/test_bitcoin /opt/bitcoin/bin/bitcoin-qt
 
+# --------------------------------------------------------------------
+
 FROM ubuntu:latest
-LABEL maintainer="Kyle Manna <kyle@kylemanna.com>"
+LABEL maintainer="Olly Stedall <olly@digibyte.help>"
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 ENV HOME /digibyte
