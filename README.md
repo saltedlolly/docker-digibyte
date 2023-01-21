@@ -5,7 +5,7 @@ Digibyte for Docker
 [![Docker Pulls](https://img.shields.io/docker/pulls/kylemanna/bitcoind.svg)](https://hub.docker.com/r/kylemanna/bitcoind/)
 [![Build Status](https://travis-ci.org/kylemanna/docker-bitcoind.svg?branch=master)](https://travis-ci.org/kylemanna/docker-bitcoind/)
 
-Docker image that runs the Bitcoin bitcoind node in a container for easy deployment.
+Docker image that runs the DigiByte digibyted node in a container for easy deployment.
 
 
 Requirements
