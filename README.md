@@ -12,11 +12,9 @@ Docker image that runs a DigiByte full node in a container for easy deployment.
 Requirements
 ------------
 
-* Physical machine, cloud instance, or VPS that supports Docker (i.e. [Vultr](http://bit.ly/1HngXg0), [Digital Ocean](http://bit.ly/18AykdD), KVM or XEN based VMs) running Ubuntu 14.04 or later (*not OpenVZ containers!*)
-* At least 100 GB to store the block chain files (and always growing!)
+* Physical machine, cloud instance, or VPS that supports Docker (i.e. [Digital Ocean](https://m.do.co/c/c7fabf7b6f97), Vultr, KVM or XEN based VMs) running Ubuntu 14.04 or later (*not OpenVZ containers!*)
+* At least 50 GB to store the blockchain files (and always growing!)
 * At least 4 GB RAM + 4 GB swap file
-
-Recommended and tested on unadvertised (only shown within control panel) [Vultr SATA Storage 1024 MB RAM/250 GB disk instance @ $10/mo](http://bit.ly/vultrbitcoind).  Vultr also *accepts Bitcoin payments*!
 
 
 Really Fast Quick Start
@@ -24,7 +22,7 @@ Really Fast Quick Start
 
 One liner for Ubuntu 14.04 LTS machines with JSON-RPC enabled on localhost and adds upstart init script:
 
-    curl https://raw.githubusercontent.com/saltedlolly/docker-digibyted/master/bootstrap-host.sh | sh -s trusty
+    curl https://raw.githubusercontent.com/saltedlolly/docker-digibyte/master/bootstrap-host.sh | sh -s trusty
 
 
 Quick Start

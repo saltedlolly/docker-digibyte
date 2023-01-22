@@ -52,10 +52,9 @@ RUN apt update \
 
 # --------------------------------------------------------------------
 
-# Get the latest DigiByte Core. The downloaded binary is not currently verified.
+# Get the latest DigiByte Core and test it. The downloaded binary is not currently verified.
 
 ARG VERSION=7.17.3
-ARG DIGBYTE_CORE_SIGNATURE=
 
 RUN cd /tmp \
     && wget \
