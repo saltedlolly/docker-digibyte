@@ -27,7 +27,8 @@ RUN apt update \
 
 # --------------------------------------------------------------------
 
-# This is how Bitcoin Core gets downloaded. It would be good to introduce the same checks for DigiByte when possible.
+# This is how Bitcoin Core gets downloaded and verified.
+# It would be good to use the equivalent verification for the DigiByte binary, if possible.
 
 # ARG VERSION=24.0.1
 # ARG BITCOIN_CORE_SIGNATURE=71A3B16735405025D447E8F274810B012346C9A6
