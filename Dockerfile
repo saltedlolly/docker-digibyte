@@ -52,7 +52,7 @@ RUN apt update \
 
 # --------------------------------------------------------------------
 
-# Get the latest DigiByte Core. The download os not currently verified.
+# Get the latest DigiByte Core. The downloaded binary is not currently verified.
 
 ARG VERSION=7.17.3
 ARG DIGBYTE_CORE_SIGNATURE=
