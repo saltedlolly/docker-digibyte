@@ -1,11 +1,12 @@
-Digibyte for Docker
+DigiByte for Docker
 ===================
 
 [![Docker Stars](https://img.shields.io/docker/stars/kylemanna/bitcoind.svg)](https://hub.docker.com/r/kylemanna/bitcoind/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/kylemanna/bitcoind.svg)](https://hub.docker.com/r/kylemanna/bitcoind/)
 [![Build Status](https://travis-ci.org/kylemanna/docker-bitcoind.svg?branch=master)](https://travis-ci.org/kylemanna/docker-bitcoind/)
+[![Twitter](https://img.shields.io/twitter/follow/digibytehelp?style=social)
 
-Docker image that runs the DigiByte digibyted node in a container for easy deployment.
+Docker image that runs a DigiByte full node in a container for easy deployment.
 
 
 Requirements

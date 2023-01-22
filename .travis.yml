@@ -9,7 +9,7 @@ install:
 
 before_script:
   - env | sort
-  - image="bitcoind:$VARIANT"
+  - image="digibyte:$VARIANT"
 
 script:
   - docker buildx build --platform linux/arm64,linux/amd64,linux/riscv64 -t "$image" .

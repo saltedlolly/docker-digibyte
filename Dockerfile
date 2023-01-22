@@ -51,22 +51,18 @@ RUN apt update \
 
 # --------------------------------------------------------------------
 
-# Get the latest DigiByte Core
+# Get the latest DigiByte Core. The download os not currently verified.
 
 ARG VERSION=7.17.3
 ARG DIGBYTE_CORE_SIGNATURE=
 
 RUN cd /tmp \
-    && gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys ${BITCOIN_CORE_SIGNATURE} \
-    && wget https://bitcoincore.org/bin/bitcoin-core-${VERSION}/SHA256SUMS.asc \
-    https://bitcoincore.org/bin/bitcoin-core-${VERSION}/SHA256SUMS \
+    && wget \
     https://github.com/DigiByte-Core/digibyte/releases/download/v${VERSION}/digibyte-${VERSION}-${ARCH}-linux-gnu.tar.gz \
-    && gpg --verify --status-fd 1 --verify SHA256SUMS.asc SHA256SUMS 2>/dev/null | grep "^\[GNUPG:\] VALIDSIG.*${BITCOIN_CORE_SIGNATURE}\$" \
-    && sha256sum --ignore-missing --check SHA256SUMS \
-    && tar -xzvf bitcoin-${VERSION}-${ARCH}-linux-gnu.tar.gz -C /opt \
-    && ln -sv bitcoin-${VERSION} /opt/bitcoin \
-    && /opt/bitcoin/bin/test_bitcoin --show_progress \
-    && rm -v /opt/bitcoin/bin/test_bitcoin /opt/bitcoin/bin/bitcoin-qt
+    && tar -xzvf digibyte-${VERSION}-${ARCH}-linux-gnu.tar.gz -C /opt \
+    && ln -sv digibyte-${VERSION} /opt/digibyte \
+    && /opt/digibyte/bin/test_digibyte --show_progress \
+    && rm -v /opt/digibyte/bin/test_digibyte /opt/bitcoin/bin/digibyte-qt
 
 # --------------------------------------------------------------------
 
